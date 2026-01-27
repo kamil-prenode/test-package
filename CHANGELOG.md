@@ -1,5 +1,11 @@
 # @test-org-name/test-package
 
+## 1.0.11
+
+### Patch Changes
+
+- 4c03c18: Some important change
+
 ## 1.0.10
 
 ### Patch Changes
