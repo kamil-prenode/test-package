@@ -1,5 +1,11 @@
 # @test-org-name/test-package
 
+## 1.0.10
+
+### Patch Changes
+
+- bd50d3a: Some important explanation
+
 ## 1.0.9
 
 ### Patch Changes
