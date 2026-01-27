@@ -1,5 +1,11 @@
 # @test-org-name/test-package
 
+## 1.0.9
+
+### Patch Changes
+
+- 601c437: Add again
+
 ## 1.0.8
 
 ### Patch Changes
