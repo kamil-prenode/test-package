@@ -1,5 +1,11 @@
 # @test-org-name/test-package
 
+## 1.0.8
+
+### Patch Changes
+
+- 213dd7d: Some summary about the fix
+
 ## 1.0.7
 
 ### Patch Changes
