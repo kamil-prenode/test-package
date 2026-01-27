@@ -1,5 +1,11 @@
 # @test-org-name/test-package
 
+## 1.0.12
+
+### Patch Changes
+
+- adab297: Add some explanation here
+
 ## 1.0.11
 
 ### Patch Changes
