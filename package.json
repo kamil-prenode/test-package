@@ -1,6 +1,7 @@
 {
   "name": "@test-org-name/test-package",
   "version": "1.0.5",
+  "type": "module",
   "description": "My experimental package",
   "main": "dist/index.cjs",
   "module": "dist/index.js",

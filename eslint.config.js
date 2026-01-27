@@ -8,6 +8,10 @@ export default [
     files: ['src/**/*.ts'],
     languageOptions: {
       parser: tsparser,
+      globals: {
+        console: 'readonly',
+        process: 'readonly',
+      },
     },
     plugins: {
       '@typescript-eslint': tseslint,
