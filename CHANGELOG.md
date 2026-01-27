@@ -1,5 +1,23 @@
 # @test-org-name/test-package
 
+## 1.0.10
+
+### Patch Changes
+
+- bd50d3a: Some important explanation
+
+## 1.0.9
+
+### Patch Changes
+
+- 601c437: Add again
+
+## 1.0.8
+
+### Patch Changes
+
+- 213dd7d: Some summary about the fix
+
 ## 1.0.7
 
 ### Patch Changes
