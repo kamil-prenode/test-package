@@ -1,3 +1,3 @@
 export const greet = () => 'Hello, World!';
 
-console.log(greet() + ' - 1st time!');
+console.log(greet() + ' - 3rd time!');
