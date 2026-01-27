@@ -1,30 +1,32 @@
-name: Publish to npm
+name: Release
 
 on:
   push:
-    tags:
-      - 'v*'
+    branches:
+      - main
 
 jobs:
-  publish:
+  release:
     runs-on: ubuntu-latest
+    environment: npm-publish
+    permissions:
+      contents: write
+      id-token: write
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '20'
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Install dependencies
-        run: npm ci
+      - run: npm ci
+      - run: npm run build
 
-      - name: Build
-        run: npm run build
-
-      - name: Publish to npm
-        run: npm publish --access public
+      - name: Create Release PR or Publish
+        uses: changesets/action@v1
+        with:
+          publish: npx changeset publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
