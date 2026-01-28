@@ -1,26 +1,17 @@
 name: Release
 
 on:
-  release:
-    types: [created]
+  push:
+    branches:
+      - main
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v5
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-      - run: npm ci
-      - run: npm test
-
-  publish-gpr:
-    needs: build
+  release:
     runs-on: ubuntu-latest
     permissions:
+      contents: write
       packages: write
-      contents: read
+      pull-requests: write
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v4
@@ -28,6 +19,13 @@ jobs:
           node-version: 20
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
-      - run: npm publish
+      - run: npm run build
+      - run: npm test
+
+      - name: Create Release PR or Publish
+        uses: changesets/action@v1
+        with:
+          publish: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
