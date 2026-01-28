@@ -1,5 +1,5 @@
 {
-  "name": "@test-org-name/test-package",
+  "name": "@kamil-prenode/test-package",
   "version": "1.0.12",
   "type": "module",
   "description": "My experimental package",
