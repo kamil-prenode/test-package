@@ -1,5 +1,11 @@
 # @test-org-name/test-package
 
+## 1.0.13
+
+### Patch Changes
+
+- 4a1561e: Some change summary
+
 ## 1.0.12
 
 ### Patch Changes

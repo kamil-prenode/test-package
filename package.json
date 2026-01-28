@@ -1,6 +1,6 @@
 {
   "name": "@kamil-prenode/test-package",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "type": "module",
   "description": "My experimental package",
   "main": "dist/index.cjs",
